@@ -6,7 +6,7 @@ import { CargoForm }    from './cargo-form';
 
 @Injectable()
 export class CargoFormService {
-  private url = 'https://suppliersimulatorbackend.mybluemix.net/api/cargos';
+  private url = 'https://educama-supplier-simulator-backend.mybluemix.net/api/cargos';
 
   constructor(private http: Http) { }
 

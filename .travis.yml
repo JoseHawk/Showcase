@@ -14,6 +14,8 @@ script:
   && (cd frontend && ./build.sh)
   && (cd acceptance-tests && ./build.sh && ./upload-serenity-reports.sh)
   && (cd services/flightinformation && ./build.sh)
+  && (cd services/educama-supplier-simulator-backend && ./build.sh)
+  && (cd services/educama-supplier-simulator-frontend && ./build.sh)
 addons:
   #Browser is used by the acceptance tests
   firefox: '42.0'

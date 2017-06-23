@@ -22,3 +22,14 @@ applications:
   disk_quota: 256M
   services:
    - flight-service-database
+- name: educama-supplier-simulator-frontend
+  buildpack: staticfile_buildpack
+  disk_quota: 64M
+  memory: 64M
+  path: dist
+- name: educama-supplier-simulator-backend
+  command: node server.js
+  memory:  128M
+  services:
+      - supplier-simulator-queue
+      - supplier-simulator-database

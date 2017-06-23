@@ -17,3 +17,5 @@ target/
 # IntelliJ
 .idea/
 *.iml
+/services/educama-supplier-simulator-backend/nbproject/private/
+/services/educama-supplier-simulator-backend/node_modules/
