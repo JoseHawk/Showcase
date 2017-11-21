@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
-  apiBaseUrl: ""
+  apiBaseUrl: "https://educama-supplier-simulator-frontend-sandbox.mybluemix.net"
 };

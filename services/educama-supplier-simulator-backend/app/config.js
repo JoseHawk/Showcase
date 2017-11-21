@@ -7,7 +7,7 @@ var appEnv = cfenv.getAppEnv();
 var cors = require('cors');
 
 module.exports = function (app) {
-    app.set('port', process.env.PORT || 8080);
+    app.set('port', process.env.PORT || 8085);
     app.use(cors());
     app.use(bodyParser.urlencoded({ extended: true })); // It will let us get the data from a POST
     app.use(bodyParser.json());
