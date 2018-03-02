@@ -27,4 +27,26 @@ applications:
   buildpack: https://github.com/cloudfoundry/staticfile-buildpack.git#v1.3.16
   memory: 64M
   disk_quota: 64M
-
+- name: educama-flight-service
+  host: educama-flight-service
+  path: ../services/flightinformation/target/flightinformation-0.0.1-SNAPSHOT.jar
+  buildpack: https://github.com/cloudfoundry/java-buildpack.git#v3.10
+  memory: 512M
+  disk_quota: 256M
+  services:
+   - flight-service-database
+- name: educama-supplier-simulator-backend
+  host: educama-supplier-simulator-backend
+  path: ../services/educama-supplier-simulator-backend
+  buildpack: https://github.com/cloudfoundry/nodejs-buildpack
+  command: node server.js
+  memory:  128M
+  services:
+   - supplier-simulator-queue
+   - supplier-simulator-database
+- name: educama-supplier-simulator-frontend
+  host: educama-supplier-simulator-frontend
+  path: ../services/educama-supplier-simulator-frontend/dist
+  buildpack: staticfile_buildpack
+  disk_quota: 64M
+  memory: 64M

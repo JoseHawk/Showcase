@@ -36,3 +36,11 @@ or for Haulier booking:
 
 Run `node server.js` for a dev server. Navigate to `http://localhost:8085/`.
 
+## Create User Provided Service
+For connecting against the Atlas MongoDB, create a User Provided Service (if not happend yet).
+First adapt the file educama-supplier-simulator-database-service.json.
+If connecting to a local database, provide the URI and username / password for this instance.
+
+Then create the User Provided Service with the following command:
+cf cups flight-service-database -p educama-supplier-simulator-database-service.json
+

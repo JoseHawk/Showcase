@@ -15,7 +15,9 @@ When running on Cloud Foundry the application is bound to Mongo DB service speci
 The upload interface is reached by replacing the localhost by the corresponding host.
 
 ## Create User Provided Service
-For connecting against the Atlas MongoDB, create an User Provided Service (if not happend).
-First complete the File UserProvidedService.json (The Credentials can be found in Confluence under the Flight Service)
-Then create the User Provided Service with 
-						cf cups flight-service-database -p UserProvidedService.json
+For connecting against the Atlas MongoDB, create a User Provided Service (if not happend yet).
+First adapt the file educama-flight-information-database-service.json.
+If connecting to a local database, provide the URI and username / password for this instance.
+
+Then create the User Provided Service with the following command:
+cf cups flight-service-database -p educama-flight-information-database-service.json
